@@ -37,12 +37,17 @@
   }
 }
 .loader-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 200px;
   height: 200px;
   align-items: center;
   justify-content: center;
+  z-index: 10;
   & img {
     
     height: 60%;
@@ -50,37 +55,56 @@
   }
 }
 .ghost {
-  animation: float 3s ease-out infinite;
+  animation: bounce 2s ease-in-out infinite;
 }
-@keyframes float {
-  50% {
-    transform: translate(0, 20px);
-  }
-}
-.shadowFrame {
-  width: 130px;
-  margin: auto;
-  margin-top: 25px;
-
-}
-.shadow {
-  animation: shrink 3s ease-out infinite;
-  transform-origin: center center;
-}
-.shadow ellipse {
-  transform-origin: center center;
-}
-@keyframes shrink {
+@keyframes bounce {
   0% {
-    width: 90%;
-    margin: 0 5%;
+    top: 15%;
   }
   50% {
-    width: 60%;
-    margin: 0 18%;
+    top: 48.5%;
+    width: 230px;
+    height: 190px;
   }
   100% {
-    width: 90%;
-    margin: 0 5%;
+    top: 15%;
   }
 }
+
+.basediv {
+  background-color: $color-green;
+  width: 1200px;
+  height: 30%;
+  position: fixed;
+  bottom: 0;
+}
+// .shadowFrame {
+//   width: 130px;
+//   position: absolute;
+//   top: 68%;
+//   left: 49%;
+//   transform: translateX(-50%);
+
+// }
+// .shadow {
+//   animation: shrink 3s ease-out infinite;
+//   transform-origin: 50% 50%;
+// }
+// .shadow ellipse {
+//   transform-origin: 50% 50%;
+// }
+// @keyframes shrink {
+//   0% {
+//    transform: scaleX(0.7);
+//    transform-origin: center center;
+//     margin: 0 5%;
+//   }
+//   50% {
+//     transform: scaleX(0.9);
+//     transform-origin: center center;    margin: 0 18%;
+//   }
+//   100% {
+//     transform: scaleX(0.7);
+//     transform-origin: center center;    margin: 0 5%;
+//   }
+// }

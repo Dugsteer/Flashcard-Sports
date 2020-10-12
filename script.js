@@ -2,30 +2,23 @@
 const sidey = document.getElementById('sidebar');
 const loader = document.getElementById("loaderDiv");
 const extra = document.getElementById('info');
-const mainpic = document.getElementById('mainpic');
+const ball = document.getElementById('ball');
 const blue = window.matchMedia("(max-width: 800px)");
+const cheers = new Audio('sounds/cheers.m4a');
+
+function deactivate(){
+    ball.classList.remove('action');
+}
+
+function kickball(){
+    ball.classList.add('action');
+    cheers.play();
+    setTimeout(deactivate, 2000);
+}
 
 
-//switch introduction pic
-function switchpic(){
-    switch (mainpic.innerHTML) {
-        case '<img src="img/fashion/fashion1.png" alt="decorative">' :
-            mainpic.innerHTML = '<img src="img/fashion/fashion2.png" alt="decorative">';
-            break;
-        case '<img src="img/fashion/fashion2.png" alt="decorative">' :
-            mainpic.innerHTML = '<img src="img/fashion/fashion3.png" alt="decorative">';
-         break;
-        case '<img src="img/fashion/fashion3.png" alt="decorative">' :
-            mainpic.innerHTML = '<img src="img/fashion/fashion4.png" alt="decorative">';
-         break;
-        case '<img src="img/fashion/fashion4.png" alt="decorative">' :
-            mainpic.innerHTML = '<img src="img/fashion/fashion5.png" alt="decorative">';
-         break;
-    default: 
-    mainpic.innerHTML = '<img src="img/fashion/fashion1.png" alt="decorative">' 
-}
-}
-    setInterval(switchpic, 2000);
+
+//     setInterval(switchpic, 2000);
 
 //Play applause 
 
@@ -73,29 +66,35 @@ function flipMe(){
 const count = document.getElementById('count');
 
 var imageList = [
-    "belt.jpg",
-    "boots.jpg",
-    "cap.jpg",
-    "dress.jpg",
-    "flip-flops.jpg",
-    "gloves.jpg",
-    "hat.jpg",
-    "hoodie.jpg",
-    "jacket.jpg",
-    "jeans.jpg",
-    "jumper.jpg",
-    "pyjamas.jpg",
-    "raincoat.jpg",
-    "sandals.jpg",
-    "scarf.jpg",
-    "shirt.jpg",
-    "shoes.jpg",
-    "skirt.jpg",
-    "socks.jpg",
-    "trainers.jpg",
-    "trousers.jpg",
-    "tshirt.jpg",
-    "umbrella.jpg"
+    "archery.jpg",
+    "badminton.jpg",
+    "basketball.jpg",
+    "boxing.jpg",
+    "climbing.jpg",
+    "darts.jpg",
+    "diving.jpg",
+    "driving.jpg",
+    "football.jpg",
+    "golf.jpg",
+    "gymnastics.jpg",
+    "hang-gliding.jpg",
+    "hiking.jpg",
+    "hockey.jpg",
+    "horse-riding.jpg",
+    "ice-skating.jpg",
+    "karate.jpg",
+    "paddle-surfing.jpg",
+    "rugby.jpg",
+    "running.jpg",
+    "sailing.jpg",
+    "skiing.jpg",
+    "surfing.jpg",
+    "swimming.jpg",
+    "table-tennis.jpg",
+    "tennis.jpg",
+    "weight-lifting.jpg",
+    "windsurfing.jpg",
+    "yoga.jpg"
 ];
 
 

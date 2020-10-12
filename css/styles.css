@@ -148,45 +148,40 @@ h4 {
     z-index: -1; } }
 
 .loader-container {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   flex-direction: column;
-  width: 600px;
+  width: 200px;
   height: 200px;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 10; }
   .loader-container img {
     height: 60%;
     width: 60%; }
 
 .ghost {
-  animation: float 3s ease-out infinite; }
+  animation: bounce 2s ease-in-out infinite; }
 
-@keyframes float {
-  50% {
-    transform: translate(0, 20px); } }
-
-.shadowFrame {
-  width: 130px;
-  margin: auto;
-  margin-top: 25px; }
-
-.shadow {
-  animation: shrink 3s ease-out infinite;
-  transform-origin: center center; }
-
-.shadow ellipse {
-  transform-origin: center center; }
-
-@keyframes shrink {
+@keyframes bounce {
   0% {
-    width: 90%;
-    margin: 0 5%; }
+    top: 15%; }
   50% {
-    width: 60%;
-    margin: 0 18%; }
+    top: 48.5%;
+    width: 230px;
+    height: 190px; }
   100% {
-    width: 90%;
-    margin: 0 5%; } }
+    top: 15%; } }
+
+.basediv {
+  background-color: #7ebc59;
+  width: 1200px;
+  height: 30%;
+  position: fixed;
+  bottom: 0; }
 
 .sidebar {
   grid-row: 1/5;
@@ -546,6 +541,7 @@ h4 {
     width: 170px;
     height: 260px;
     background-color: #7ebc59;
+    position: relative;
     padding: 20px;
     align-self: center;
     justify-self: flex-end;
@@ -578,6 +574,32 @@ h4 {
       .introduction__text p {
         font-size: 2.2rem;
         line-height: 2.6rem; } }
+
+.ball {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 75%;
+  left: 20%; }
+
+.action {
+  animation: grow 4s ease-out forwards; }
+
+.ball img {
+  height: 100%;
+  width: 100%; }
+
+@keyframes grow {
+  0% {
+    transform: scale(1); }
+  30% {
+    transform: scale(14);
+    opacity: 1;
+    top: 50%; }
+  100% {
+    transform: scale(14);
+    top: 50%;
+    opacity: 1; } }
 
 .links {
   margin-top: 3rem; }
@@ -647,7 +669,7 @@ h4 {
       align-items: center;
       background-color: #fff;
       transform: rotateX(0deg);
-      background-color: #c5f5a8; }
+      background-color: #7ebc59; }
     .flashcard__flip-card-front, .flashcard__flip-card-back {
       position: absolute;
       width: 100%;
