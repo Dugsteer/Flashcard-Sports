@@ -38,7 +38,7 @@
 }
 .loader-container {
   position: absolute;
-  top: 30%;
+  top: 15%;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
@@ -55,26 +55,30 @@
   }
 }
 .ghost {
-  animation: bounce 2s ease-in-out infinite;
+  animation: bounce 1s ease-in-out infinite;
 }
 @keyframes bounce {
   0% {
     top: 15%;
   }
   50% {
-    top: 48.5%;
+    top: 50%;
     width: 230px;
     height: 190px;
   }
+
   100% {
     top: 15%;
+    width: 200px;
+    height: 200px;
   }
+
 }
 
 .basediv {
   background-color: $color-green;
   width: 1200px;
-  height: 30%;
+  height: 40%;
   position: fixed;
   bottom: 0;
 }

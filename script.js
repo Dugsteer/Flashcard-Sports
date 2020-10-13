@@ -4,7 +4,7 @@ const loader = document.getElementById("loaderDiv");
 const extra = document.getElementById('info');
 const ball = document.getElementById('ball');
 const blue = window.matchMedia("(max-width: 800px)");
-const cheers = new Audio('sounds/cheers.m4a');
+const cheers = new Audio('sounds/cheers.ogg');
 
 function deactivate(){
     ball.classList.remove('action');
