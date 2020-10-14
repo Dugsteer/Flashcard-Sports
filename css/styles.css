@@ -62,7 +62,7 @@ h4 {
   justify-content: center;
   grid-row: 3/4;
   grid-column: 2/3;
-  width: 60%;
+  width: 100%;
   margin: auto;
   margin-top: 3rem;
   height: 5vw; }
@@ -534,6 +534,13 @@ h4 {
       width: 400px;
       height: 500px;
       flex-direction: column; } }
+  @media only screen and (max-width: 37.5em) {
+    .introduction {
+      grid-row: 2/3;
+      justify-content: center;
+      width: 360px;
+      height: 450px;
+      flex-direction: column; } }
   .introduction a {
     display: inline;
     text-decoration: none;
@@ -548,6 +555,7 @@ h4 {
     align-self: center;
     justify-self: flex-end;
     margin-bottom: 2rem;
+    margin-right: 1rem;
     border-radius: 3px;
     cursor: pointer;
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.4); }
@@ -628,7 +636,7 @@ h4 {
   @media only screen and (max-width: 50em) {
     .wrapper {
       grid-template-columns: 0 1fr; } }
-  @media only screen and (max-width: 28em) {
+  @media only screen and (max-width: 37.5em) {
     .wrapper {
       width: 100vw; } }
 
@@ -648,12 +656,15 @@ h4 {
 
 .overlay {
   position: relative;
+  margin: auto;
   margin-top: 3rem;
   width: 800px;
   height: 500px;
   transform: all 5s ease;
   border-radius: 5px;
-  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4); }
+  box-shadow: 3px 3px 3px 2px rgba(0, 0, 0, 0.4);
+  align-self: center;
+  justify-self: center; }
 
 .overlay .after {
   position: absolute;
@@ -704,8 +715,8 @@ h4 {
 
 @media only screen and (max-width: 50em) {
   .overlay {
-    width: 600px;
-    height: 400px; }
+    width: 550px;
+    height: 350px; }
   .image-text {
     width: 300;
     height: 150;
@@ -713,8 +724,8 @@ h4 {
 
 @media only screen and (max-width: 37.5em) {
   .overlay {
-    width: 400px;
-    height: 250px; }
+    width: 360px;
+    height: 220px; }
   .image-text {
     width: 300;
     height: 150;
@@ -743,7 +754,7 @@ h4 {
   @media only screen and (max-width: 37.5em) {
     .links {
       justify-content: center;
-      width: 400px;
+      width: 360px;
       height: 300px; } }
   .links__text {
     margin-bottom: 3rem;
@@ -779,9 +790,6 @@ h4 {
   border-top: 1px solid #fff;
   box-shadow: 3px 0px 1px 0px rgba(0, 0, 0, 0.4); }
   @media only screen and (max-width: 75em) {
-    .footer {
-      width: 100vw; } }
-  @media only screen and (max-width: 28em) {
     .footer {
       width: 100vw; } }
   .footer__copyright {

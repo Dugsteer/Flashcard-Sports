@@ -16,12 +16,15 @@
 
 .overlay {
     position: relative;
+    margin: auto;
     margin-top: 3rem;
     width: 800px;
     height: 500px;
     transform: all 5s ease;
     border-radius: 5px;
     box-shadow: $box-shadow-large;
+    align-self: center;
+    justify-self: center;
 }
 
 .overlay .after {
@@ -33,6 +36,7 @@
     border-radius: 5px;
     display: none;
     transform: all 5s ease;
+
     
 }
 
@@ -86,9 +90,10 @@
 }
 @media only screen and (max-width:$bp-medium) {
     .overlay {
-        width: 600px;
-        height: 400px;
+        width: 550px;
+        height: 350px;
     }
+
     .image-text {
         width: 300;
         height: 150;
@@ -97,8 +102,8 @@
 }
 @media only screen and (max-width:$bp-small) {
     .overlay {
-        width: 400px;
-        height: 250px;
+        width: 360px;
+        height: 220px;
     }
 
     .image-text {
