@@ -97,18 +97,31 @@
     .image-text {
         width: 300;
         height: 150;
-        font-size: 8rem;
+        font-size: 5rem;
     }
 }
 @media only screen and (max-width:$bp-small) {
     .overlay {
         width: 360px;
         height: 220px;
+        font-size: 5rem;
     }
 
     .image-text {
         width: 300;
         height: 150;
-        font-size: 6rem;
+        font-size: 5rem;
+    }
+}
+@media only screen and (max-width:$bp-tiny) {
+    .overlay {
+        width: 310px;
+        height: 200px;
+    }
+
+    .image-text {
+        width: 300;
+        height: 150;
+        font-size: 4rem;
     }
 }

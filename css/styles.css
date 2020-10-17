@@ -539,7 +539,14 @@ h4 {
       grid-row: 2/3;
       justify-content: center;
       width: 360px;
-      height: 450px;
+      height: 550px;
+      flex-direction: column; } }
+  @media only screen and (max-width: 20em) {
+    .introduction {
+      grid-row: 2/3;
+      justify-content: center;
+      width: 310px;
+      height: 550px;
       flex-direction: column; } }
   .introduction a {
     display: inline;
@@ -720,16 +727,26 @@ h4 {
   .image-text {
     width: 300;
     height: 150;
-    font-size: 8rem; } }
+    font-size: 5rem; } }
 
 @media only screen and (max-width: 37.5em) {
   .overlay {
     width: 360px;
-    height: 220px; }
+    height: 220px;
+    font-size: 5rem; }
   .image-text {
     width: 300;
     height: 150;
-    font-size: 6rem; } }
+    font-size: 5rem; } }
+
+@media only screen and (max-width: 20em) {
+  .overlay {
+    width: 310px;
+    height: 200px; }
+  .image-text {
+    width: 300;
+    height: 150;
+    font-size: 4rem; } }
 
 .links {
   grid-row: 3/4;
@@ -755,6 +772,11 @@ h4 {
     .links {
       justify-content: center;
       width: 360px;
+      height: 300px; } }
+  @media only screen and (max-width: 37.5em) {
+    .links {
+      justify-content: center;
+      width: 310px;
       height: 300px; } }
   .links__text {
     margin-bottom: 3rem;
