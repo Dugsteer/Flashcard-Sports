@@ -109,12 +109,12 @@ function goForwards() {
   if (x < imageList.length - 1) {
     x++;
     imageArt.src =  `/img/${imageList[x]}`;
-   imageText.textContent = `${imageList[x].slice(0, -4)}`;
+   imageText.textContent = `${imageList[x].slice(0, -4).replace("-", " ")}`;
     count.innerHTML = `${x + 1}/${imageList.length}`;
     return x;
   } else {
     imageArt.src = ` /img/${imageList[imageList.length - 1]}`;
-    imageText.textContent = `${imageList[imageList.length - 1].slice(0, -4)}`;
+    imageText.textContent = `${imageList[imageList.length - 1].slice(0, -4).replace("-", " ")}`;
     count.innerHTML = `${imageList.length}/${imageList.length}`;
     x = 0;
     x = imageList.length -1;
@@ -126,12 +126,12 @@ function goBackwards() {
   if (x > 0) {
     x--;
     imageArt.src =  `/img/${imageList[x]}`;
-    imageText.textContent = `${imageList[x].slice(0, -4)}`;
+    imageText.textContent = `${imageList[x].slice(0, -4).replace("-", " ")}`;
     count.innerHTML = `${x + 1}/${imageList.length}`;
     return x;
   } else {
     imageArt.src = ` /img/${imageList[0]}`;
-    imageText.textContent = `${imageList[0].slice(0, -4)}`;
+    imageText.textContent = `${imageList[0].slice(0, -4).replace("-", " ")}`;
     count.innerHTML = `${1}/${imageList.length}`;
     x = 0;
     return x;
