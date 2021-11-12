@@ -62,8 +62,7 @@ h4 {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  background-color: red; }
+  margin-top: 2rem; }
 
 .mainpage_top {
   width: 800px;
@@ -89,8 +88,7 @@ h4 {
   grid-column: 2/3;
   margin-top: 2rem;
   width: 320px;
-  height: auto;
-  background-color: red; }
+  height: auto; }
   @media only screen and (max-width: 37.5em) {
     .sense-bottom {
       grid-row: 5/6; } }
